@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/eliavco/CSS-advanced/issues"
   },
-  "homepage": "https://github.com/eliavco/CSS-advanced#readme"
+  "homepage": "https://github.com/eliavco/CSS-advanced#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
 }
