@@ -1,62 +1,24 @@
+// Abstract
+@import "abstract/variables"
+@import "abstract/mixins"
+@import "abstract/functions"
+
+// Base
 @import "base/base"
 @import "base/typography"
 @import "base/utilities"
 @import "base/animations"
 
-// COLORS:
-$color-main-light: #7ed56f // Light Green
-$color-main: #55c57a // Medium Green
-$color-main-dark: #28b485 // Dark green
-$color-gray-dark: #777 // Gray
-$color-white: #fff // White
-$color-black: #000 // Black
+// Components
+@import "components/button"
 
-*,
-*::after,
-*::before
-    margin: 0
-    padding: 0
-    box-sizing: inherit
+// Layout
+@import "layout/header"
+
+// Pages
+@import "pages/home"
 
 
-html 
-    font-size: 62.5%
-
-
-body 
-    font-family: "Lato", "Segoe UI", "Arial", sans-serif
-    font-weight: 400
-    line-height: 1.7
-    // font-size: 16px
-    // font-size: 1.6rem
-    color: $color-gray-dark
-    padding: 3rem
-    box-sizing: border-box
-
-
-.header 
-    height: 95vh  
-    background-image: linear-gradient(to right bottom,rgba($color-main-light, 0.7),rgba($color-main-dark, 0.7)),url(../img/hero.jpg)  
-    background-size: cover  
-    background-position: top  
-    position: relative  
-
-    // clip-path: polygon(50% 0, 0 100%, 100% 100%)     
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
-
-    &__logo 
-        height: 3.5rem
-        &-box
-            position: absolute  
-            top: 4rem  
-            left: 4rem 
-
-    &__text-box 
-        position: absolute  
-        top: 40%  
-        left: 50%  
-        transform: translate(-50%, -50%)  
-        text-align: center  
   
 
 .heading-primary 
@@ -88,94 +50,3 @@ body
         letter-spacing: 1.74rem  
 
         animation: moveInRight 1s ease-out  
-  
-
-@keyframes moveInLeft
-    0% 
-        opacity: 0  
-        transform: translateX(-10rem)  
-      
-
-    80% 
-        transform: translateX(1rem)  
-      
-
-    100% 
-        opacity: 1  
-        transform: translate(0)  
-      
-  
-
-@keyframes moveInRight
-    0% 
-        opacity: 0  
-        transform: translateX(10rem)  
-      
-
-    80% 
-        transform: translateX(-1rem)  
-      
-
-    100% 
-        opacity: 1  
-        transform: translate(0)  
-      
-  
-
-@keyframes moveInBottom
-    0% 
-        opacity: 0  
-        transform: translateY(3rem)  
-      
-
-    100% 
-        opacity: 1  
-        transform: translate(0)  
-      
-.btn
-    &:link,
-    &:visited 
-        text-transform: uppercase  
-        text-decoration: none  
-        padding: 1.5rem 4rem  
-        display: inline-block  
-        border-radius: 10rem  
-        position: relative  
-        font-size: 1.6rem  
-
-        transition: all .3s  
-    
-
-    &:hover 
-        transform: translateY(-.6rem)  
-        box-shadow: 0 1rem 2rem rgba($color-black, .2)  
-        &::after 
-            transform: scaleX(1.4) scaleY(1.6)  
-            opacity: 0  
-
-    &:active 
-        transform: translateY(-.1rem)  
-        box-shadow: 0 .5rem 1rem rgba($color-black, .2)  
-    
-    &::after 
-        content: ""  
-        display: inline-block  
-        height: 100%  
-        width: 100%  
-        border-radius: 10rem  
-        position: absolute  
-        top: 0  
-        left: 0  
-        z-index: -1  
-        transition: all .4s  
-    
-    &--white 
-        background-color: $color-white
-        color: $color-gray-dark      
-        &::after 
-            background-color: $color-white
-    
-
-    &--animated 
-        animation: moveInBottom .75s ease-out .75s  
-        animation-fill-mode: backwards 
