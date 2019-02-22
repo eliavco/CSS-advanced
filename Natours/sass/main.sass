@@ -2,6 +2,8 @@
 $color-main-light: #7ed56f // Light Green
 $color-main: #55c57a // Medium Green
 $color-main-dark: #28b485 // Dark green
+$color-gray-dark: #777 // Gray
+$color-white: #fff // White
 
 *,
 *::after,
@@ -21,7 +23,7 @@ body
     line-height: 1.7
     // font-size: 16px
     // font-size: 1.6rem
-    color: #777
+    color: $color-gray-dark
     padding: 3rem
     box-sizing: border-box
 
@@ -56,7 +58,7 @@ body
   
 
 .heading-primary 
-    color: #fff  
+    color: $color-white
     text-transform: uppercase  
 
     backface-visibility: hidden  
@@ -148,17 +150,17 @@ body
 
 .btn:hover 
     transform: translateY(-.6rem)  
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2)  
+    box-shadow: 0 1rem 2rem rgba(#000, .2)  
   
 
 .btn:active 
     transform: translateY(-.1rem)  
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2)  
+    box-shadow: 0 .5rem 1rem rgba(#000, .2)  
   
 
 .btn--white 
-    background-color: #fff  
-    color: #777  
+    background-color: $color-white
+    color: $color-gray-dark  
   
 
 .btn::after 
@@ -175,7 +177,7 @@ body
   
 
 .btn--white::after 
-    background-color: #fff  
+    background-color: $color-white
   
 
 .btn:hover::after 
