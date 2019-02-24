@@ -4,7 +4,7 @@
   "description": "A natours landing page",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass sass/main.sass css/style.css -w"
+    "sass": "node-sass sass/main.sass css/style.css --compressed -w"
   },
   "repository": {
     "type": "git",
