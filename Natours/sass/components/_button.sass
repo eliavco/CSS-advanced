@@ -7,7 +7,7 @@
         display: inline-block  
         border-radius: 10rem  
         position: relative  
-        font-size: 1.6rem  
+        font-size: $font-size 
 
         transition: all .3s  
     
@@ -45,3 +45,20 @@
     &--animated 
         animation: moveInBottom .75s ease-out .75s  
         animation-fill-mode: backwards 
+
+.btn-text
+    &:link,
+    &:visited
+        font-size: $font-size
+        color: $color-main
+        display: inline-block
+        text-decoration: none
+        border-bottom: 1px solid $color-main
+        transition: all .4s
+        padding: .3rem
+
+
+    &:hover
+        color: black
+
+    &:active
