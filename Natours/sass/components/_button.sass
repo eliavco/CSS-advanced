@@ -53,12 +53,17 @@
         color: $color-main
         display: inline-block
         text-decoration: none
-        border-bottom: 1px solid $color-main
+        border-bottom: .1rem solid $color-main
         transition: all .4s
         padding: .3rem
 
 
     &:hover
-        color: black
+        background-color: $color-main
+        color: $color-white
+        box-shadow: 0 1rem 2rem rgba($color-black, .15)
+        transform: translateY(-.2rem)
 
     &:active
+        box-shadow: 0 .2rem 2rem rgba($color-black, .15)
+        transform: translateY(0)
