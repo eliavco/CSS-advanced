@@ -1,5 +1,13 @@
+
+// Clearfix for floats
 @mixin clearfix
     &::after
         clear: both
         content: ""
         display: table
+
+// Skew a section
+@mixin skewSection
+    transform: skewY(-$skew-section)
+    > *
+        transform: skewY($skew-section)
