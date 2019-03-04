@@ -166,7 +166,11 @@ body {
   transform: translateY(0); }
 
 .card {
-  background-color: orangered; }
+  background-color: orangered;
+  height: 50rem;
+  transition: all .8s; }
+  .card:hover {
+    transform: translateY(180deg); }
 
 .composition {
   position: relative; }
