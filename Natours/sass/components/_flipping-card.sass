@@ -1,0 +1,26 @@
+.card
+    perspective: 150rem
+    -moz-perspective: 150rem
+    position: relative
+    height: $card-height
+
+    &__side
+        font-size: 2rem
+        height: $card-height
+        transition: all 1.2s
+        position: absolute
+        height: $card-height
+        top: 0
+        left: 0
+        width: 100%
+        backface-visibility: hidden
+
+        &--back
+            transform: rotateY(-180deg)
+
+    &-parent:hover .card .card__side
+            &--front
+                transform: rotateY(-180deg)
+
+            &--back
+                transform: rotateY(0)
