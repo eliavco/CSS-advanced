@@ -5,9 +5,8 @@
     height: $card-height
 
     &__side
-        font-size: 2rem
         height: $card-height
-        transition: all 1.2s
+        transition: all 1.4s
         position: absolute
         height: $card-height
         top: 0
@@ -16,7 +15,7 @@
         backface-visibility: hidden
 
         &--back
-            transform: rotateY(-180deg)
+            transform: rotateY(180deg)
 
     &-parent:hover .card .card__side
             &--front
