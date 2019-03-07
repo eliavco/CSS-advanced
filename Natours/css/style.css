@@ -434,6 +434,8 @@ body {
   transform: skewY(-7deg); }
   .section-features > * {
     transform: skewY(7deg); }
+  .section-features > * {
+    margin-bottom: 10rem; }
 
 .section-tours {
   background-color: #f7f7f7;
