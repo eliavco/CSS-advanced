@@ -374,6 +374,12 @@ body {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%); }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -446,4 +452,5 @@ body {
     transform: skewY(7deg); }
 
 .section-stories {
-  padding: 15rem; }
+  padding: 15rem;
+  position: relative; }
