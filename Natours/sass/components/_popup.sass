@@ -1,7 +1,84 @@
-// .popup
-//     height: 100vh
-//     width: 100vw
-//     position: fixed
-//     top: 0
-//     left: 0
-//     background-color: rgba($color-black, .85)
+.popup
+    height: 100vh
+    width: 100vw
+    position: fixed
+    top: 0
+    left: 0
+    background-color: rgba($color-black, .8)
+    z-index: 4000
+    opacity: 0
+    visibility: hidden
+    transition: all .4s
+
+    // Open State
+    &:target
+        opacity: 1
+        visibility: visible
+        
+        & .popup__content
+            opacity: 1
+            transform: translate(-50%, -50%) scale(1)
+
+    &__close
+        &:link,
+        &:visited
+            color: $color-gray-dark
+            position: absolute
+            top: 1.5rem
+            right: 2.5rem
+            font-size: 3rem
+            text-decoration: none
+            display: inline-block
+            z-index: 5000
+            transition: all .2s
+            line-height: 1
+
+        &:hover,
+        &:active
+            color: $color-secondary-dark
+
+    &__content
+        @include absCenter
+        width: 75%
+        background-color: $color-white
+        box-shadow: 0 2rem 4rem rgba($color-black, .2)
+        border-radius: .3rem
+        display: table
+        overflow: hidden
+        opacity: 0
+        transform: translate(-50%, -50%) scale(.25)
+        transition: all .5s .3s
+
+    &__left
+        width: 33.33%
+        float: left
+        display: table-cell
+        vertical-align: top
+
+    &__right
+        width: 66.67%
+        float: right
+        display: table-cell
+        vertical-align: middle
+        padding: 3rem 5rem
+        text-align: center
+
+    &__img
+        display: block
+        width: 100%
+        height: auto
+
+    &__text
+        margin-bottom: 2.5rem
+        font-size: 1.4rem
+        text-align: justify
+        -moz-column-count: 2
+        -moz-column-gap: 3rem
+        -moz-column-rule: .1rem solid $color-gray-light-2
+        column-count: 2
+        column-gap: 3rem
+        column-rule: .1rem solid $color-gray-light-2
+        -moz-hyphens: auto
+        -ms-hyphens: auto
+        -webkit-hyphens: auto
+        hyphens: auto
