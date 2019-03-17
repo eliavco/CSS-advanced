@@ -5,12 +5,26 @@
     padding: 0
     box-sizing: inherit
 
-html 
+html
     // This defines what 1rem is
     font-size: $rem-definition
+    overflow-x: hidden
+
+    @include respond(landscapeTablet)   // width > 1200px
+        font-size: $rem-definition*0.9  // 1rem = 9px, 9/16 = 56.25%
+    
+    @include respond(portraitTablet)    // width > 900px
+        font-size: $rem-definition*0.8  // 1rem = 8px, 8/16 = 50%
+    
+    @include respond(largeDesktop)      // width < 1800px
+        font-size: $rem-definition*1.2  // 1rem = 12px, 12/16 = 75%
 
 body
     box-sizing: border-box
+    overflow: hidden
+    padding: 3rem
+    @include respond(portraitTablet)
+        padding: 0
 
 *::selection
     background-color: rgba($color-main, .9)

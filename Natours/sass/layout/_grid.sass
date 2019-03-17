@@ -1,8 +1,15 @@
 .row
     max-width: $grid-width
+    @media ((max-width: 1150px) && (min-width: 900px))
+        padding: 0 10rem
     margin: 0 auto
     &:not(:last-child)
         margin-bottom: $grid-horizontal-gutter
+        @include respond(portraitTablet)
+            margin-bottom: $grid-horizontal-gutter-small       
+
+    @include respond(portraitTablet)
+        max-width: 50rem            
 
     @include clearfix
     
@@ -10,6 +17,12 @@
         float: left
         &:not(:last-child)
             margin-right: $grid-vertical-gutter
+            @include respond(portraitTablet)
+                margin-right: 0  
+                margin-bottom: $grid-horizontal-gutter-small              
+
+        @include respond(portraitTablet)
+            width: 100% !important
 
     .col-1-of-2
         width: calc((100% - #{$grid-vertical-gutter}) / 2)
