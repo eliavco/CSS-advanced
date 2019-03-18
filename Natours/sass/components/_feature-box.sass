@@ -7,6 +7,9 @@
     box-shadow: $shadow-default
     transition: all .3s
 
+    @include respond(portraitTablet)
+        padding: 2rem        
+
     &__icon
         font-size: 6rem
         margin-bottom: .5rem
@@ -15,6 +18,8 @@
         -webkit-background-clip: text
         color: transparent
         padding: .2rem
+        @include respond(portraitTablet)
+            margin-bottom: 0            
 
     &:hover
         transform: translateY(-1.5rem) scale(1.03)

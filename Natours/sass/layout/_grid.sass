@@ -1,7 +1,7 @@
 .row
     max-width: $grid-width
-    @media ((max-width: 1150px) && (min-width: 900px))
-        padding: 0 10rem
+    @media (max-width: 1150px) and (min-width: 900px)
+        padding: 0 3rem
     margin: 0 auto
     &:not(:last-child)
         margin-bottom: $grid-horizontal-gutter
@@ -9,7 +9,8 @@
             margin-bottom: $grid-horizontal-gutter-small       
 
     @include respond(portraitTablet)
-        max-width: 50rem            
+        max-width: 50rem
+        padding: 0 3rem          
 
     @include clearfix
     

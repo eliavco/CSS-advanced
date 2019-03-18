@@ -2,6 +2,10 @@
     border-radius: 1rem
     overflow: hidden
     box-shadow: $shadow-default
+    @include respond(landscapeTablet)
+        border-radius: 0
+        box-shadow: none 
+        overflow: visible       
 
     &--front
         background-color: $color-white
@@ -24,6 +28,9 @@
         background-blend-mode: screen
         -webkit-clip-path: ellipse(78% 60% at 38% 30%)
         clip-path: ellipse(78% 60% at 38% 30%)
+        @include respond(landscapeTablet)
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)            
         // -webkit-clip-path: ellipse(100% 93% at 8% 5%)
         // clip-path: ellipse(100% 93% at 8% 5%)
         border-top-left-radius: 1rem
@@ -98,4 +105,28 @@
 
     &__price--value
         font-size: 6rem
-        font-weight: 100        
+        font-weight: 100 
+
+    @include respond(landscapeTablet)
+        border-radius: 1rem
+        overflow: hidden
+        background-color: $color-white
+        box-shadow: $shadow-default
+
+        &__cta
+            width: 100%
+            position: relative
+            top: 0
+            left: 0
+            transform: translate(0)
+            padding: 4rem
+            padding-top: 7rem
+
+        &__price-box
+            margin-bottom: 3rem
+
+        &__price--value
+            font-size: 6rem
+
+        &__details
+            padding: 1rem 3rem

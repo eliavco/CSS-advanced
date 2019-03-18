@@ -8,10 +8,10 @@
         height: $card-height
         transition: all 1.4s
         position: absolute
-        height: $card-height
         top: 0
         left: 0
         width: 100%
+        -webkit-backface-visibility: hidden
         backface-visibility: hidden
 
         &--back
@@ -23,3 +23,23 @@
 
             &--back
                 transform: rotateY(0)
+
+    @include respond(landscapeTablet)  
+        perspective: 0
+        -moz-perspective: 0
+        position: relative
+        height: auto
+
+        &__side
+            height: auto
+            transition: all 1.4s
+            position: relative
+            
+            &--back
+                transform: rotateY(0)
+                -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%)
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%)
+
+        &-parent:hover .card .card__side
+                &--front
+                    transform: rotateY(0)
