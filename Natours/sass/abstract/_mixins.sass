@@ -38,17 +38,17 @@
     
 @mixin respond($breakpoint)
     @if $breakpoint == phone
-        @media (max-width: $phone)
+        @media only screen and (max-width: $phone)
             @content
     
     @else if $breakpoint == portraitTablet
-        @media (max-width: $portrait-tablet)
+        @media only screen and (max-width: $portrait-tablet)
             @content
     
     @else if $breakpoint == landscapeTablet
-        @media (max-width: $landscape-tablet)
+        @media only screen and (max-width: $landscape-tablet)
             @content
 
     @else if $breakpoint == largeDesktop
-        @media (min-width: $big-desktop)
+        @media only screen and (min-width: $big-desktop)
             @content
