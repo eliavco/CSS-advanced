@@ -1,0 +1,55 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--color-gray-light-1);
+    box-shadow: var(--shadow-dark);
+    min-height: 50rem;
+}
+
+.content {
+    display: flex;
+}
+
+.header {
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-bar {
+    background-color: var(--color-gray-dark-1);
+    flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.overview {
+    background-color: #fff;
+    flex: 1;
+}
+
+.details {
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-gray-light-1);
+    border-bottom: var(--line);
+}
+
+.description {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    font-size: 1.4rem;
+}
+
+.user-reviews {
+    background-color: greenyellow;
+    flex: 1;
+}
