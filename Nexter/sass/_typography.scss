@@ -14,6 +14,10 @@
 
 .heading-1 {
     @extend %heading;    
+    font-size: 4.5rem;
+    color: $color-gray-light-1;
+    line-height: 1;
+    
 }
 
 .heading-2 {
@@ -64,3 +68,4 @@
 .mt-md { margin-top: 3rem;}
 .mt-lg { margin-top: 4rem;}
 .mt-hg { margin-top: 8rem;}
+
